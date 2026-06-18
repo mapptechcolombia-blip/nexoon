@@ -1,0 +1,115 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --font-heading: "IBM Plex Sans", sans-serif;
+  --font-sans: "Geist", sans-serif;
+  --font-mono: "Geist Mono", monospace;
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Nexon Official Colors */
+  --blue-cyan: #50CEFF;
+  --blue-primary: #133ED8;
+  --blue-navy: #020367;
+  --black-nexon: #111111;
+
+  /* Semantic Colors */
+  --background: #FFFFFF;
+  --foreground: #020367;
+  --card: #FFFFFF;
+  --card-foreground: #020367;
+  --popover: #FFFFFF;
+  --popover-foreground: #020367;
+  --primary: #133ED8;
+  --primary-foreground: #FFFFFF;
+  --secondary: #50CEFF;
+  --secondary-foreground: #020367;
+  --muted: #F0F4FF;
+  --muted-foreground: #6B7280;
+  --accent: #50CEFF;
+  --accent-foreground: #020367;
+  --destructive: #EF4444;
+  --border: #E5E7EB;
+  --input: #F3F4F6;
+  --ring: #133ED8;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #020367 0%, #133ED8 50%, #50CEFF 100%);
+  --gradient-reverse: linear-gradient(135deg, #50CEFF 0%, #133ED8 50%, #020367 100%);
+  --gradient-subtle: linear-gradient(135deg, #F5F8FF 0%, #E8F4FF 100%);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+  }
+  h1 { @apply text-4xl font-bold; }
+  h2 { @apply text-3xl font-bold; }
+  h3 { @apply text-2xl font-semibold; }
+  h4 { @apply text-xl font-semibold; }
+  h5 { @apply text-lg font-semibold; }
+  h6 { @apply font-semibold; }
+}
+
+@keyframes bgHeroFloat {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(var(--float-x, 20px), var(--float-y, -30px)) scale(1.3);
+    opacity: 0.55;
+  }
+}
+
+@keyframes bgHeroPulse {
+  0%, 100% { opacity: 0.5; transform: translateX(-50%) scale(1); }
+  50%       { opacity: 0.85; transform: translateX(-50%) scale(1.08); }
+}
