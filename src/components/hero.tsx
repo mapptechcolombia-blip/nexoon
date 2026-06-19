@@ -15,7 +15,10 @@ export function Hero() {
           data-hero-card
           className="relative w-full min-h-[60vh] md:h-full border-[#133ED8]/30 rounded-[32px] overflow-hidden shadow-2xl p-0 gap-0"
           style={{
-            background: "#111111",
+            backgroundImage: "url('/backgrounds/hero.png')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat",
             "--mouse-x": "50%",
             "--mouse-y": "50%",
             boxShadow: "0 25px 60px rgba(2,3,103,0.5), 0 0 0 1px rgba(19,62,216,0.2)",
@@ -53,18 +56,6 @@ export function Hero() {
             }}
           />
 
-          <div
-            aria-hidden
-            className="absolute bottom-[-220px] left-1/2 -translate-x-1/2 z-10 pointer-events-none"
-            style={{
-              width: "900px",
-              height: "450px",
-              background:
-                "radial-gradient(ellipse at center top, rgba(80,206,255,0.25) 0%, rgba(19,62,216,0.18) 30%, rgba(2,3,103,0.08) 55%, transparent 70%)",
-              filter: "blur(8px)",
-              animation: "bgHeroPulse 800ms ease-in-out infinite",
-            }}
-          />
 
           {/* Watermark */}
           <div
@@ -78,16 +69,32 @@ export function Hero() {
             {data.watermark}
           </div>
 
-          <HeroEffects particleCount={data.particleCount} />
+          {/* <HeroEffects particleCount={data.particleCount} /> */}
+
+          {/* ── Clickable image hotspots → #servicios ─────────────── */}
+          {[
+            { label: "Estrategia",          top: "54%", left: "0%",   w: "14%", h: "12%" },
+            { label: "Desarrollo Comercial", top: "68%", left: "22%",  w: "22%", h: "14%" },
+            { label: "Crecimiento",          top: "46%", left: "70%",  w: "22%", h: "14%" },
+            { label: "Alianza",              top: "62%", left: "88%",  w: "12%", h: "12%" },
+          ].map(({ label, top, left, w, h }) => (
+            <a
+              key={label}
+              href="#servicios"
+              aria-label={`Ver servicio: ${label}`}
+              className="absolute z-20 rounded-xl cursor-pointer transition-all duration-200 hover:ring-2 hover:ring-[#50CEFF]/60 hover:bg-[#50CEFF]/10"
+              style={{ top, left, width: w, height: h }}
+            />
+          ))}
 
           {/* ── Hero body ─────────────────────────────────────────────── */}
-          <div className="relative z-30 flex flex-col h-full pt-20 justify-center">
+          <div className="relative z-30 flex flex-col h-full pt-20 md:pt-24 lg:pt-0 justify-start lg:justify-center lg:pb-[20%]">
             <div className="flex flex-col lg:flex-row lg:items-center px-6 md:px-10 pb-12 pt-8 gap-8 lg:gap-12">
 
               {/* Left column — Badge + Headline */}
               <div className="flex flex-col gap-6 lg:w-[65%]">
 
-                <h1 className="text-3xl md:text-5xl lg:text-7xl font-extrabold text-white leading-[1.05] tracking-tight">
+                <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.05] tracking-tight">
                   {data.heading.lines.map((line) => (
                     <span key={line}>
                       {line}
