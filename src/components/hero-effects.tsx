@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useMemo, useRef, useEffect } from "react";
 
 interface Particle {
   id: number;
@@ -14,24 +14,28 @@ interface Particle {
 
 const PARTICLE_COLORS = ["#50CEFF", "#133ED8", "#020367"];
 
-export function HeroEffects({ particleCount }: { particleCount: number }) {
-  const [particles, setParticles] = useState<Particle[]>([]);
+function seededRandom(seed: number) {
+  const x = Math.sin(seed) * 10000;
+  return x - Math.floor(x);
+}
 
-  useEffect(() => {
-    setParticles(
+export function HeroEffects({ particleCount }: { particleCount: number }) {
+  const particles = useMemo<Particle[]>(
+    () =>
       Array.from({ length: particleCount }, (_, i) => ({
         id: i,
-        x: Math.random() * 100,
-        y: Math.random() * 100,
-        size: Math.random() * 3 + 1.5,
-        duration: Math.random() * 12 + 14,
-        delay: Math.random() * 6,
-        floatX: (Math.random() - 0.5) * 70,
-        floatY: (Math.random() - 0.5) * 70,
+        x: seededRandom(i * 7 + 1) * 100,
+        y: seededRandom(i * 7 + 2) * 100,
+        size: seededRandom(i * 7 + 3) * 3 + 1.5,
+        duration: seededRandom(i * 7 + 4) * 12 + 14,
+        delay: seededRandom(i * 7 + 5) * 6,
+        floatX: (seededRandom(i * 7 + 6) - 0.5) * 70,
+        floatY: (seededRandom(i * 7 + 7) - 0.5) * 70,
         colorIndex: i % 3,
-      }))
-    );
-  }, [particleCount]);
+      })),
+    [particleCount],
+  );
+
   const glowRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -57,27 +61,27 @@ export function HeroEffects({ particleCount }: { particleCount: number }) {
       />
 
       {/* Floating particles */}
-      <div suppressHydrationWarning>
-      {particles.map((p) => (
-        <div
-          key={p.id}
-          aria-hidden
-          className="absolute rounded-full pointer-events-none z-10"
-          style={{
-            left: `${p.x}%`,
-            top: `${p.y}%`,
-            width: `${p.size}px`,
-            height: `${p.size}px`,
-            background: PARTICLE_COLORS[p.colorIndex],
-            opacity: 0.35,
-            filter: "blur(1px)",
-            animation: `bgHeroFloat ${p.duration}s ease-in-out infinite`,
-            animationDelay: `${p.delay}s`,
-            "--float-x": `${p.floatX}px`,
-            "--float-y": `${p.floatY}px`,
-          } as React.CSSProperties}
-        />
-      ))}
+      <div>
+        {particles.map((p) => (
+          <div
+            key={p.id}
+            aria-hidden
+            className="absolute rounded-full pointer-events-none z-10"
+            style={{
+              left: `${p.x}%`,
+              top: `${p.y}%`,
+              width: `${p.size}px`,
+              height: `${p.size}px`,
+              background: PARTICLE_COLORS[p.colorIndex],
+              opacity: 0.35,
+              filter: "blur(1px)",
+              animation: `bgHeroFloat ${p.duration}s ease-in-out infinite`,
+              animationDelay: `${p.delay}s`,
+              "--float-x": `${p.floatX}px`,
+              "--float-y": `${p.floatY}px`,
+            } as React.CSSProperties}
+          />
+        ))}
       </div>
     </>
   );

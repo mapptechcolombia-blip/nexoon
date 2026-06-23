@@ -43,6 +43,27 @@ function StatCounter({ raw, visible }: { raw: string; visible: boolean }) {
 export function About({ data }: { data: AboutContent }) {
   const ref = useRef<HTMLElement>(null);
   const visible = useInView(ref, { once: true, amount: 0.1 });
+  const leftRef = useRef<HTMLDivElement>(null);
+  const rightRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!visible) return;
+    const left = leftRef.current;
+    const right = rightRef.current;
+    if (left) left.style.willChange = "opacity, transform";
+    if (right) right.style.willChange = "opacity, transform";
+    const clear = (el: HTMLElement) => (e: TransitionEvent) => {
+      if (e.propertyName === "opacity") el.style.willChange = "auto";
+    };
+    const clearLeft = clear(left!);
+    const clearRight = clear(right!);
+    left?.addEventListener("transitionend", clearLeft);
+    right?.addEventListener("transitionend", clearRight);
+    return () => {
+      left?.removeEventListener("transitionend", clearLeft);
+      right?.removeEventListener("transitionend", clearRight);
+    };
+  }, [visible]);
 
   return (
     <section
@@ -67,9 +88,9 @@ export function About({ data }: { data: AboutContent }) {
 
           {/* ── Left: text content ───────────────────────────────── */}
           <div
+            ref={leftRef}
             className={`flex flex-col gap-8 transition-opacity transition-transform duration-700 ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-6"
               }`}
-            style={{ willChange: visible ? "opacity, transform" : "auto" }}
           >
             {/* Label */}
             <div className="flex flex-col gap-2">
@@ -131,9 +152,9 @@ export function About({ data }: { data: AboutContent }) {
 
           {/* ── Right: stats grid ────────────────────────────────── */}
           <div
+            ref={rightRef}
             className={`grid grid-cols-2 gap-3 transition-opacity transition-transform duration-700 delay-150 ${visible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-6"
               }`}
-            style={{ willChange: visible ? "opacity, transform" : "auto" }}
           >
             {data.stats.map((stat) => {
               const Icon = iconMap[stat.icon] ?? Building2;
@@ -144,7 +165,6 @@ export function About({ data }: { data: AboutContent }) {
                   style={{
                     background: "rgba(19,62,216,0.08)",
                     border: "1px solid rgba(80,206,255,0.12)",
-                    willChange: "transform",
                     contain: "layout style paint",
                   }}
                 >
