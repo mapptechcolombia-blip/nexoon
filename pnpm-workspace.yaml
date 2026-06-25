@@ -1,0 +1,4 @@
+packages:
+  - '.'
+
+trustPolicyExclude[]: undici-types

@@ -1,20 +1,12 @@
-import { useEffect, useState, useCallback } from 'react';
+import { useSyncExternalStore } from 'react';
 
 export function useScroll(threshold: number = 10) {
-  const [scrolled, setScrolled] = useState(false);
-
-  const onScroll = useCallback(() => {
-    setScrolled(window.scrollY > threshold);
-  }, [threshold]);
-
-  useEffect(() => {
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [onScroll]);
-
-  useEffect(() => {
-    onScroll();
-  }, [onScroll]);
-
-  return scrolled;
+  return useSyncExternalStore(
+    (onStoreChange) => {
+      window.addEventListener('scroll', onStoreChange, { passive: true });
+      return () => window.removeEventListener('scroll', onStoreChange);
+    },
+    () => window.scrollY > threshold,
+    () => false,
+  );
 }
