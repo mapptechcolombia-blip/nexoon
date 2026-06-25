@@ -1,5 +1,4 @@
 packages:
   - '.'
 
-minimumReleaseAge: '10080 minutes'
-trustPolicy: no-downgrade
+trustPolicyExclude[]: undici-types

@@ -17,7 +17,7 @@
     "@tanstack/react-router": "^1.168.25",
     "@tanstack/react-start": "^1.167.50",
     "class-variance-authority": "^0.7.1",
-    "clsx": "^2.1.1",
+    "clsx": "2.1.1",
     "framer-motion": "^12.40.0",
     "lucide-react": "^1.20.0",
     "react": "19.2.4",
