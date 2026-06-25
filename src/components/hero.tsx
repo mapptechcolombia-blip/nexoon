@@ -15,10 +15,7 @@ export function Hero() {
           data-hero-card
           className="relative w-full min-h-[60vh] md:h-full border-[#133ED8]/30 rounded-[32px] overflow-hidden shadow-2xl p-0 gap-0"
           style={{
-            backgroundImage: "url('/backgrounds/hero.png')",
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
+            background: "linear-gradient(135deg, #06101f 0%, #080f2a 40%, #0b1540 70%, #0d1a55 100%)",
             "--mouse-x": "50%",
             "--mouse-y": "50%",
             boxShadow: "0 25px 60px rgba(2,3,103,0.5), 0 0 0 1px rgba(19,62,216,0.2)",
@@ -56,6 +53,15 @@ export function Hero() {
             }}
           />
 
+          {/* Teal glow bottom-left — matches reference design */}
+          <div
+            aria-hidden
+            className="absolute inset-0 z-10 pointer-events-none"
+            style={{
+              background:
+                "radial-gradient(ellipse 55% 45% at 15% 85%, rgba(19,120,200,0.45) 0%, rgba(10,60,140,0.20) 50%, transparent 75%)",
+            }}
+          />
 
           {/* Watermark */}
           <div
@@ -63,13 +69,13 @@ export function Hero() {
             className="absolute bottom-0 left-1/2 -translate-x-1/2 z-10 pointer-events-none select-none font-black leading-none whitespace-nowrap tracking-widest text-[100px] md:text-[160px] lg:text-[300px]"
             style={{
               color: "transparent",
-              WebkitTextStroke: "1px rgba(80,206,255,0.06)",
+              WebkitTextStroke: "1px rgba(80,206,255,0.18)",
             }}
           >
             {data.watermark}
           </div>
 
-          {/* <HeroEffects particleCount={data.particleCount} /> */}
+          <HeroEffects particleCount={data.particleCount} />
 
           {/* ── Clickable image hotspots → #servicios ─────────────── */}
           {[
@@ -88,13 +94,13 @@ export function Hero() {
           ))}
 
           {/* ── Hero body ─────────────────────────────────────────────── */}
-          <div className="relative z-30 flex flex-col h-full pt-20 md:pt-24 lg:pt-0 justify-start lg:justify-center lg:pb-[20%]">
-            <div className="flex flex-col lg:flex-row lg:items-center px-6 md:px-10 pb-12 pt-8 gap-8 lg:gap-12">
+          <div className="relative z-30 flex flex-col h-full pt-20 md:pt-24 lg:pt-0 justify-start lg:justify-center">
+            <div className="flex flex-col lg:flex-row lg:items-center px-10 md:px-16 lg:px-20 pb-12 pt-8 gap-8 lg:gap-16">
 
-              {/* Left column — Badge + Headline */}
-              <div className="flex flex-col gap-6 lg:w-[65%]">
+              {/* Left column — Headline */}
+              <div className="flex flex-col gap-6 lg:w-[55%]">
 
-                <h1 className="text-2xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.05] tracking-tight">
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.05] tracking-tight">
                   {data.heading.lines.map((line) => (
                     <span key={line}>
                       {line}
@@ -115,7 +121,7 @@ export function Hero() {
               </div>
 
               {/* Right column — Description + CTA */}
-              <div className="flex flex-col gap-6 lg:w-[35%] lg:justify-center">
+              <div className="flex flex-col gap-6 lg:w-[45%] lg:justify-center">
                 <p
                   className="text-base md:text-lg leading-relaxed"
                   style={{ color: "rgba(255, 255, 255, 0.81)" }}
