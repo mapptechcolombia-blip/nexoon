@@ -10,6 +10,8 @@ export function Contact({ data }: { data: ContactContent }) {
   });
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const sendEmail = useServerFn(sendContactEmail);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -18,9 +20,15 @@ export function Contact({ data }: { data: ContactContent }) {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setSending(true);
-    await new Promise((r) => setTimeout(r, 1000));
-    setSending(false);
-    setSent(true);
+    setErrorMsg(null);
+    try {
+      await sendEmail({ data: form });
+      setSent(true);
+    } catch (err) {
+      setErrorMsg(err instanceof Error ? err.message : "No se pudo enviar el mensaje");
+    } finally {
+      setSending(false);
+    }
   }
 
   const inputBase =
