@@ -1,6 +1,6 @@
 import { a as __toESM, t as __commonJSMin } from "../../_runtime.mjs";
-import process from "node:process";
-//#region node_modules/.pnpm/react@19.2.4/node_modules/react/cjs/react.production.js
+import processModule from "node:process";
+//#region node_modules/react/cjs/react.production.js
 /**
 * @license React
 * react.production.js
@@ -167,8 +167,8 @@ var require_react_production = /* @__PURE__ */ __commonJSMin(((exports) => {
 				error
 			});
 			if (!window.dispatchEvent(event)) return;
-		} else if ("object" === typeof process && "function" === typeof process.emit) {
-			process.emit("uncaughtException", error);
+		} else if ("object" === typeof processModule && "function" === typeof processModule.emit) {
+			processModule.emit("uncaughtException", error);
 			return;
 		}
 		console.error(error);
@@ -360,12 +360,12 @@ var require_react_production = /* @__PURE__ */ __commonJSMin(((exports) => {
 	exports.version = "19.2.4";
 }));
 //#endregion
-//#region node_modules/.pnpm/react@19.2.4/node_modules/react/index.js
+//#region node_modules/react/index.js
 var require_react = /* @__PURE__ */ __commonJSMin(((exports, module) => {
 	module.exports = require_react_production();
 }));
 //#endregion
-//#region node_modules/.pnpm/@radix-ui+react-compose-ref_28b9252ef7b825278b2e8ad5ee112e4d/node_modules/@radix-ui/react-compose-refs/dist/index.mjs
+//#region node_modules/@radix-ui/react-compose-refs/dist/index.mjs
 var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
 function setRef(ref, value) {
 	if (typeof ref === "function") return ref(value);

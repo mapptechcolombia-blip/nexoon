@@ -1,6 +1,6 @@
 import { a as __toESM } from "../_runtime.mjs";
 import { n as require_react, t as useComposedRefs } from "./@radix-ui/react-compose-refs+[...].mjs";
-//#region node_modules/.pnpm/@radix-ui+react-slot@1.3.0_@types+react@19.2.17_react@19.2.4/node_modules/@radix-ui/react-slot/dist/index.mjs
+//#region node_modules/@radix-ui/react-slot/dist/index.mjs
 var import_react = /* @__PURE__ */ __toESM(require_react(), 1);
 // @__NO_SIDE_EFFECTS__
 function createSlot(ownerName) {

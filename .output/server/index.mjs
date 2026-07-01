@@ -15,201 +15,187 @@ globalThis.__nitro_vite_envs__ = services;
 //#endregion
 //#region #nitro/virtual/public-assets-data
 var public_assets_data_default = {
-	"/favicon.ico": {
-		"type": "image/vnd.microsoft.icon",
-		"etag": "\"5f7e-+prhY7Z6NCwK/UOzFvJpl9HeK60\"",
-		"mtime": "2026-06-19T20:29:54.356Z",
-		"size": 24446,
-		"path": "../public/favicon.ico"
-	},
 	"/logo.svg": {
 		"type": "image/svg+xml",
 		"etag": "\"958-znZoVw1HZUFaqWUR2k+sw2qOBPc\"",
-		"mtime": "2026-06-19T20:29:54.356Z",
+		"mtime": "2026-06-25T14:50:25.872Z",
 		"size": 2392,
 		"path": "../public/logo.svg"
-	},
-	"/logotipo_black.svg": {
-		"type": "image/svg+xml",
-		"etag": "\"648-34k/PX+p4e1gPBn2G0hZ/SiUGnA\"",
-		"mtime": "2026-06-19T20:29:54.356Z",
-		"size": 1608,
-		"path": "../public/logotipo_black.svg"
 	},
 	"/logotipo_white.svg": {
 		"type": "image/svg+xml",
 		"etag": "\"63c-oiU3PZSwRedYuzitcpIXhOb9/zU\"",
-		"mtime": "2026-06-19T20:29:54.356Z",
+		"mtime": "2026-06-25T14:50:25.873Z",
 		"size": 1596,
 		"path": "../public/logotipo_white.svg"
-	},
-	"/assets/styles-CwEE-TTM.css": {
-		"type": "text/css; charset=utf-8",
-		"etag": "\"a21d-aonGL1BVJeedIg1k+ICRysEMEZM\"",
-		"mtime": "2026-06-23T14:01:46.297Z",
-		"size": 41501,
-		"path": "../public/assets/styles-CwEE-TTM.css"
 	},
 	"/clients/logotipo-cae.png": {
 		"type": "image/png",
 		"etag": "\"1853-I/4BdQA1B8s8vwcG7bA/P+KKVB0\"",
-		"mtime": "2026-06-19T20:29:54.337Z",
+		"mtime": "2026-06-25T14:50:25.861Z",
 		"size": 6227,
 		"path": "../public/clients/logotipo-cae.png"
 	},
-	"/assets/routes-C6sDhtFL.js": {
+	"/assets/routes-CduBVKJ6.js": {
 		"type": "text/javascript; charset=utf-8",
-		"etag": "\"27f2d-i36YEOL3BFDpKb0UY700OlmFE6w\"",
-		"mtime": "2026-06-23T14:01:46.297Z",
-		"size": 163629,
-		"path": "../public/assets/routes-C6sDhtFL.js"
-	},
-	"/assets/index-BdjroIls.js": {
-		"type": "text/javascript; charset=utf-8",
-		"etag": "\"5459b-axjquNFvqEOeotRH8f2CF9LWzbk\"",
-		"mtime": "2026-06-23T14:01:46.296Z",
-		"size": 345499,
-		"path": "../public/assets/index-BdjroIls.js"
-	},
-	"/clients/logotipo-fiancol.png": {
-		"type": "image/png",
-		"etag": "\"7971-rEfSTR2VDjLkt2RIpy4EbEWrcWk\"",
-		"mtime": "2026-06-19T20:29:54.337Z",
-		"size": 31089,
-		"path": "../public/clients/logotipo-fiancol.png"
+		"etag": "\"28138-Wwzqan+ABFUV5HPiOyGH7qI0PFs\"",
+		"mtime": "2026-07-01T23:05:40.503Z",
+		"size": 164152,
+		"path": "../public/assets/routes-CduBVKJ6.js"
 	},
 	"/clients/logotipo-greet-energy.png": {
 		"type": "image/png",
 		"etag": "\"1a3b-0tBc8iuHqhv8dkQnEieTgyoFjw0\"",
-		"mtime": "2026-06-19T20:29:54.337Z",
+		"mtime": "2026-06-25T14:50:25.863Z",
 		"size": 6715,
 		"path": "../public/clients/logotipo-greet-energy.png"
 	},
-	"/clients/logotipo-outliners.png": {
-		"type": "image/png",
-		"etag": "\"1764-ofJDHN9dx0/qF6bi7jtNE8gJXQQ\"",
-		"mtime": "2026-06-19T20:29:54.352Z",
-		"size": 5988,
-		"path": "../public/clients/logotipo-outliners.png"
-	},
-	"/clients/logotipo-netwifi.png": {
-		"type": "image/png",
-		"etag": "\"23a1-V8z/gxUEIrAMIngkT1XL65ILVQo\"",
-		"mtime": "2026-06-19T20:29:54.352Z",
-		"size": 9121,
-		"path": "../public/clients/logotipo-netwifi.png"
+	"/assets/styles-DBN4CAPG.css": {
+		"type": "text/css; charset=utf-8",
+		"etag": "\"a40b-06AbxCFTmbPlEKa6Wl1txxeF28M\"",
+		"mtime": "2026-07-01T23:05:40.503Z",
+		"size": 41995,
+		"path": "../public/assets/styles-DBN4CAPG.css"
 	},
 	"/clients/logotipo-kovia.png": {
 		"type": "image/png",
 		"etag": "\"16c8-vKxmg2O7zo9CAYgSfUgIy99FSKg\"",
-		"mtime": "2026-06-19T20:29:54.337Z",
+		"mtime": "2026-06-25T14:50:25.863Z",
 		"size": 5832,
 		"path": "../public/clients/logotipo-kovia.png"
 	},
-	"/clients/logotipo-vertice.png": {
+	"/clients/logotipo-fiancol.png": {
 		"type": "image/png",
-		"etag": "\"1323-jf7XmGBpeDHawvw9i2ROecKwLDA\"",
-		"mtime": "2026-06-19T20:29:54.352Z",
-		"size": 4899,
-		"path": "../public/clients/logotipo-vertice.png"
+		"etag": "\"7971-rEfSTR2VDjLkt2RIpy4EbEWrcWk\"",
+		"mtime": "2026-06-25T14:50:25.862Z",
+		"size": 31089,
+		"path": "../public/clients/logotipo-fiancol.png"
+	},
+	"/clients/logotipo-netwifi.png": {
+		"type": "image/png",
+		"etag": "\"23a1-V8z/gxUEIrAMIngkT1XL65ILVQo\"",
+		"mtime": "2026-06-25T14:50:25.869Z",
+		"size": 9121,
+		"path": "../public/clients/logotipo-netwifi.png"
+	},
+	"/clients/logotipo-outliners.png": {
+		"type": "image/png",
+		"etag": "\"1764-ofJDHN9dx0/qF6bi7jtNE8gJXQQ\"",
+		"mtime": "2026-06-25T14:50:25.870Z",
+		"size": 5988,
+		"path": "../public/clients/logotipo-outliners.png"
 	},
 	"/clients/logotipo-vittorino.png": {
 		"type": "image/png",
 		"etag": "\"f27-nzClFdaq7eTNZ79jYEyzdvldnUk\"",
-		"mtime": "2026-06-19T20:29:54.352Z",
+		"mtime": "2026-06-25T14:50:25.871Z",
 		"size": 3879,
 		"path": "../public/clients/logotipo-vittorino.png"
+	},
+	"/clients/logotipo-vertice.png": {
+		"type": "image/png",
+		"etag": "\"1323-jf7XmGBpeDHawvw9i2ROecKwLDA\"",
+		"mtime": "2026-06-25T14:50:25.870Z",
+		"size": 4899,
+		"path": "../public/clients/logotipo-vertice.png"
 	},
 	"/clients/logotipo-wow.png": {
 		"type": "image/png",
 		"etag": "\"1e54-MB/hrrHWDf1PjdvG6Zykwu8TDeA\"",
-		"mtime": "2026-06-19T20:29:54.356Z",
+		"mtime": "2026-06-25T14:50:25.871Z",
 		"size": 7764,
 		"path": "../public/clients/logotipo-wow.png"
 	},
-	"/methodology/ejecuta.png": {
-		"type": "image/png",
-		"etag": "\"20ebd-H1aQNStQfenB29VRcDIMAIhlixE\"",
-		"mtime": "2026-06-19T20:29:54.356Z",
-		"size": 134845,
-		"path": "../public/methodology/ejecuta.png"
-	},
-	"/methodology/entender.png": {
-		"type": "image/png",
-		"etag": "\"2283c-Gx+k/tshrfmmQUBZBM5U/TIbPsg\"",
-		"mtime": "2026-06-19T20:29:54.356Z",
-		"size": 141372,
-		"path": "../public/methodology/entender.png"
-	},
-	"/clients/logotipo-lavanderia-maritima.png": {
-		"type": "image/png",
-		"etag": "\"73b36-CAVQMyAHh8Jzgmz9f85EIPTbh/c\"",
-		"mtime": "2026-06-19T20:29:54.352Z",
-		"size": 473910,
-		"path": "../public/clients/logotipo-lavanderia-maritima.png"
+	"/assets/index-Dew04Mds.js": {
+		"type": "text/javascript; charset=utf-8",
+		"etag": "\"54695-0d4k4yyUO/fP4U0o6CvY+K9AgqA\"",
+		"mtime": "2026-07-01T23:05:40.502Z",
+		"size": 345749,
+		"path": "../public/assets/index-Dew04Mds.js"
 	},
 	"/methodology/diseñar.png": {
 		"type": "image/png",
 		"etag": "\"1e763-DeyazKVfyG1oqM3Vb1PA21kDqks\"",
-		"mtime": "2026-06-19T20:29:54.356Z",
+		"mtime": "2026-06-25T14:50:25.875Z",
 		"size": 124771,
 		"path": "../public/methodology/diseñar.png"
+	},
+	"/methodology/entender.png": {
+		"type": "image/png",
+		"etag": "\"2283c-Gx+k/tshrfmmQUBZBM5U/TIbPsg\"",
+		"mtime": "2026-06-25T14:50:25.877Z",
+		"size": 141372,
+		"path": "../public/methodology/entender.png"
+	},
+	"/methodology/ejecuta.png": {
+		"type": "image/png",
+		"etag": "\"20ebd-H1aQNStQfenB29VRcDIMAIhlixE\"",
+		"mtime": "2026-06-25T14:50:25.876Z",
+		"size": 134845,
+		"path": "../public/methodology/ejecuta.png"
+	},
+	"/clients/logotipo-lavanderia-maritima.png": {
+		"type": "image/png",
+		"etag": "\"73b36-CAVQMyAHh8Jzgmz9f85EIPTbh/c\"",
+		"mtime": "2026-06-25T14:50:25.867Z",
+		"size": 473910,
+		"path": "../public/clients/logotipo-lavanderia-maritima.png"
 	},
 	"/methodology/identificar.png": {
 		"type": "image/png",
 		"etag": "\"1ed80-1jAAZ3qnk49BWhY5dXMab82LUpY\"",
-		"mtime": "2026-06-19T20:29:54.356Z",
+		"mtime": "2026-06-25T14:50:25.878Z",
 		"size": 126336,
 		"path": "../public/methodology/identificar.png"
 	},
 	"/methodology/resultados.png": {
 		"type": "image/png",
 		"etag": "\"13e3e-EVt003aiIJYBy/pzC6ijGXX13/U\"",
-		"mtime": "2026-06-19T20:29:54.368Z",
+		"mtime": "2026-06-25T14:50:25.879Z",
 		"size": 81470,
 		"path": "../public/methodology/resultados.png"
-	},
-	"/backgrounds/backgrounds.png": {
-		"type": "image/png",
-		"etag": "\"19defa-ZKWYf22svLBSYIAHqoIL7yRTMjs\"",
-		"mtime": "2026-06-19T20:29:54.337Z",
-		"size": 1695482,
-		"path": "../public/backgrounds/backgrounds.png"
 	},
 	"/services/estrategia.png": {
 		"type": "image/png",
 		"etag": "\"12720c-bYbsyomIqemoRurIY38NhYN+QG8\"",
-		"mtime": "2026-06-19T20:29:54.368Z",
+		"mtime": "2026-06-25T14:50:25.903Z",
 		"size": 1208844,
 		"path": "../public/services/estrategia.png"
 	},
-	"/services/ventas.png": {
+	"/backgrounds/backgrounds.png": {
 		"type": "image/png",
-		"etag": "\"108060-9JhUKW4S8QLix3tkhZw9oLSHsbE\"",
-		"mtime": "2026-06-19T20:29:54.384Z",
-		"size": 1081440,
-		"path": "../public/services/ventas.png"
-	},
-	"/services/analisis.png": {
-		"type": "image/png",
-		"etag": "\"20e9da-Qd/2HTKaFhWdejyfwkJn0Qjmim8\"",
-		"mtime": "2026-06-19T20:29:54.368Z",
-		"size": 2157018,
-		"path": "../public/services/analisis.png"
+		"etag": "\"19defa-ZKWYf22svLBSYIAHqoIL7yRTMjs\"",
+		"mtime": "2026-06-25T14:50:25.852Z",
+		"size": 1695482,
+		"path": "../public/backgrounds/backgrounds.png"
 	},
 	"/services/marketing.png": {
 		"type": "image/png",
 		"etag": "\"155bde-JY6vCCX2nITmicHs/ADBwt+VcpY\"",
-		"mtime": "2026-06-19T20:29:54.384Z",
+		"mtime": "2026-06-25T14:50:25.910Z",
 		"size": 1399774,
 		"path": "../public/services/marketing.png"
 	},
 	"/services/negocios.png": {
 		"type": "image/png",
 		"etag": "\"1bc496-SwOc1hpw/2kAvpwUSfe8OMHsmGg\"",
-		"mtime": "2026-06-19T20:29:54.384Z",
+		"mtime": "2026-06-25T14:50:25.920Z",
 		"size": 1819798,
 		"path": "../public/services/negocios.png"
+	},
+	"/services/analisis.png": {
+		"type": "image/png",
+		"etag": "\"20e9da-Qd/2HTKaFhWdejyfwkJn0Qjmim8\"",
+		"mtime": "2026-06-25T14:50:25.890Z",
+		"size": 2157018,
+		"path": "../public/services/analisis.png"
+	},
+	"/services/ventas.png": {
+		"type": "image/png",
+		"etag": "\"108060-9JhUKW4S8QLix3tkhZw9oLSHsbE\"",
+		"mtime": "2026-06-25T14:50:25.926Z",
+		"size": 1081440,
+		"path": "../public/services/ventas.png"
 	}
 };
 //#endregion
@@ -221,7 +207,7 @@ function isPublicAssetURL(id = "") {
 	return false;
 }
 //#endregion
-//#region node_modules/.pnpm/nitro@3.0.260603-beta_choki_adae49d1ab29db7e91593600539c3da2/node_modules/nitro/dist/runtime/internal/route-rules.mjs
+//#region node_modules/nitro/dist/runtime/internal/route-rules.mjs
 var headers = ((m) => function headersRouteRule(event) {
 	for (const [key, value] of Object.entries(m.options || {})) event.res.headers.set(key, value);
 });
@@ -247,11 +233,11 @@ var findRouteRules = /* @__PURE__ */ (() => {
 		return r;
 	};
 })();
-var _lazy_Gs2POg = defineLazyEventHandler(() => import("./_chunks/ssr-renderer.mjs"));
+var _lazy_Pz_Gii = defineLazyEventHandler(() => import("./_chunks/ssr-renderer.mjs"));
 var findRoute = /* @__PURE__ */ (() => {
 	const data = {
 		route: "/**",
-		handler: _lazy_Gs2POg
+		handler: _lazy_Pz_Gii
 	};
 	return ((_m, p) => {
 		return {
@@ -262,7 +248,7 @@ var findRoute = /* @__PURE__ */ (() => {
 })();
 [].filter(Boolean);
 //#endregion
-//#region node_modules/.pnpm/nitro@3.0.260603-beta_choki_adae49d1ab29db7e91593600539c3da2/node_modules/nitro/dist/runtime/internal/error/prod.mjs
+//#region node_modules/nitro/dist/runtime/internal/error/prod.mjs
 var errorHandler = (error, event) => {
 	const res = defaultHandler(error, event);
 	return new FastResponse(typeof res.body === "string" ? res.body : JSON.stringify(res.body, null, 2), res);
@@ -351,7 +337,7 @@ function createH3App(config) {
 	return h3App;
 }
 //#endregion
-//#region node_modules/.pnpm/nitro@3.0.260603-beta_choki_adae49d1ab29db7e91593600539c3da2/node_modules/nitro/dist/runtime/internal/app.mjs
+//#region node_modules/nitro/dist/runtime/internal/app.mjs
 var APP_ID = "default";
 function useNitroApp() {
 	let instance = useNitroApp._instance;
@@ -405,7 +391,7 @@ function getRouteRules(method, pathname) {
 	};
 }
 //#endregion
-//#region node_modules/.pnpm/nitro@3.0.260603-beta_choki_adae49d1ab29db7e91593600539c3da2/node_modules/nitro/dist/presets/cloudflare/runtime/_module-handler.mjs
+//#region node_modules/nitro/dist/presets/cloudflare/runtime/_module-handler.mjs
 function createHandler(hooks) {
 	const nitroApp = useNitroApp();
 	const nitroHooks = useNitroHooks();
@@ -479,7 +465,7 @@ function augmentReq(cfReq, ctx) {
 	req.waitUntil = ctx.context?.waitUntil.bind(ctx.context);
 }
 //#endregion
-//#region node_modules/.pnpm/nitro@3.0.260603-beta_choki_adae49d1ab29db7e91593600539c3da2/node_modules/nitro/dist/presets/cloudflare/runtime/cloudflare-module.mjs
+//#region node_modules/nitro/dist/presets/cloudflare/runtime/cloudflare-module.mjs
 var cloudflare_module_default = createHandler({ fetch(cfRequest, env, context, url) {
 	if (env.ASSETS && isPublicAssetURL(url.pathname)) return env.ASSETS.fetch(cfRequest);
 } });

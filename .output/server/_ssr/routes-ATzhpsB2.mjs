@@ -5,8 +5,8 @@ import { n as require_jsx_runtime } from "../_libs/react+tanstack__react-query.m
 import { n as clsx, t as cva } from "../_libs/class-variance-authority+clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
 import { t as Slot } from "../_libs/radix-ui__react-slot.mjs";
-import { C as ChartColumn, S as ChartNoAxesColumn, _ as Globe, a as TrendingUp, b as PenLine, c as Send, d as Phone, f as MessageSquare, g as Handshake, h as Mail, i as User, l as Search, m as Megaphone, n as X, o as Target, p as Menu, r as Users, s as Store, t as Zap, u as Rocket, v as Crosshair, x as Earth, y as Building2 } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-B1wi7p-_.js
+import { C as Building2, S as ChartColumn, _ as Handshake, a as TrendingUp, b as Crosshair, c as Send, d as Phone, f as PenLine, g as Mail, h as Megaphone, i as User, l as Search, m as Menu, n as X, o as Target, p as MessageSquare, r as Users, s as Store, t as Zap, u as Rocket, v as Globe, x as ChartNoAxesColumn, y as Earth } from "../_libs/lucide-react.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-ATzhpsB2.js
 var import_react = /* @__PURE__ */ __toESM(require_react());
 var import_jsx_runtime = require_jsx_runtime();
 function cn(...inputs) {
@@ -156,7 +156,7 @@ function Hero() {
 				"data-hero-card": true,
 				className: "relative w-full min-h-[60vh] md:h-full border-[#133ED8]/30 rounded-[32px] overflow-hidden shadow-2xl p-0 gap-0",
 				style: {
-					background: "#111111",
+					background: "linear-gradient(135deg, #06101f 0%, #080f2a 40%, #0b1540 70%, #0d1a55 100%)",
 					"--mouse-x": "50%",
 					"--mouse-y": "50%",
 					boxShadow: "0 25px 60px rgba(2,3,103,0.5), 0 0 0 1px rgba(19,62,216,0.2)"
@@ -184,33 +184,67 @@ function Hero() {
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						"aria-hidden": true,
-						className: "absolute bottom-[-220px] left-1/2 -translate-x-1/2 z-10 pointer-events-none",
-						style: {
-							width: "900px",
-							height: "450px",
-							background: "radial-gradient(ellipse at center top, rgba(80,206,255,0.25) 0%, rgba(19,62,216,0.18) 30%, rgba(2,3,103,0.08) 55%, transparent 70%)",
-							filter: "blur(8px)",
-							animation: "bgHeroPulse 800ms ease-in-out infinite"
-						}
+						className: "absolute inset-0 z-10 pointer-events-none",
+						style: { background: "radial-gradient(ellipse 55% 45% at 15% 85%, rgba(19,120,200,0.45) 0%, rgba(10,60,140,0.20) 50%, transparent 75%)" }
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 						"aria-hidden": true,
 						className: "absolute bottom-0 left-1/2 -translate-x-1/2 z-10 pointer-events-none select-none font-black leading-none whitespace-nowrap tracking-widest text-[100px] md:text-[160px] lg:text-[300px]",
 						style: {
 							color: "transparent",
-							WebkitTextStroke: "1px rgba(80,206,255,0.06)"
+							WebkitTextStroke: "1px rgba(80,206,255,0.18)"
 						},
 						children: data.watermark
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(HeroEffects, { particleCount: data.particleCount }),
+					[
+						{
+							label: "Estrategia",
+							top: "54%",
+							left: "0%",
+							w: "14%",
+							h: "12%"
+						},
+						{
+							label: "Desarrollo Comercial",
+							top: "68%",
+							left: "22%",
+							w: "22%",
+							h: "14%"
+						},
+						{
+							label: "Crecimiento",
+							top: "46%",
+							left: "70%",
+							w: "22%",
+							h: "14%"
+						},
+						{
+							label: "Alianza",
+							top: "62%",
+							left: "88%",
+							w: "12%",
+							h: "12%"
+						}
+					].map(({ label, top, left, w, h }) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+						href: "#servicios",
+						"aria-label": `Ver servicio: ${label}`,
+						className: "absolute z-20 rounded-xl cursor-pointer transition-all duration-200 hover:ring-2 hover:ring-[#50CEFF]/60 hover:bg-[#50CEFF]/10",
+						style: {
+							top,
+							left,
+							width: w,
+							height: h
+						}
+					}, label)),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-						className: "relative z-30 flex flex-col h-full pt-20 justify-center",
+						className: "relative z-30 flex flex-col h-full pt-20 md:pt-24 lg:pt-0 justify-start lg:justify-center",
 						children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-							className: "flex flex-col lg:flex-row lg:items-center px-6 md:px-10 pb-12 pt-8 gap-8 lg:gap-12",
+							className: "flex flex-col lg:flex-row lg:items-center px-10 md:px-16 lg:px-20 pb-12 pt-8 gap-8 lg:gap-16",
 							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
-								className: "flex flex-col gap-6 lg:w-[65%]",
+								className: "flex flex-col gap-6 lg:w-[55%]",
 								children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("h1", {
-									className: "text-3xl md:text-5xl lg:text-7xl font-extrabold text-white leading-[1.05] tracking-tight",
+									className: "text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-[1.05] tracking-tight",
 									children: [data.heading.lines.map((line) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { children: [line, /* @__PURE__ */ (0, import_jsx_runtime.jsx)("br", {})] }, line)), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
 										style: {
 											background: "linear-gradient(90deg, #133ED8 0%, #50CEFF 100%)",
@@ -222,7 +256,7 @@ function Hero() {
 									})]
 								})
 							}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-								className: "flex flex-col gap-6 lg:w-[35%] lg:justify-center",
+								className: "flex flex-col gap-6 lg:w-[45%] lg:justify-center",
 								children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 									className: "text-base md:text-lg leading-relaxed",
 									style: { color: "rgba(255, 255, 255, 0.81)" },
@@ -1657,7 +1691,8 @@ function StatCounter({ raw, visible }) {
 		const animate = () => {
 			const elapsed = Date.now() - startTime;
 			const progress = Math.min(elapsed / duration, 1);
-			setCount(Math.round(number * progress));
+			const current = Math.round(number * progress);
+			setCount(current);
 			if (progress < 1) animationId = requestAnimationFrame(animate);
 		};
 		animationId = requestAnimationFrame(animate);
