@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { User, Building2, Mail, Phone, PenLine, Send } from "lucide-react";
+import { useServerFn } from "@tanstack/react-start";
 import type { ContactContent } from "@/lib/queries/contact";
+import { sendContactEmail } from "@/lib/send-contact.functions";
 
 export function Contact({ data }: { data: ContactContent }) {
   const [form, setForm] = useState({
@@ -8,6 +10,8 @@ export function Contact({ data }: { data: ContactContent }) {
   });
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+  const sendEmail = useServerFn(sendContactEmail);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -16,9 +20,15 @@ export function Contact({ data }: { data: ContactContent }) {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     setSending(true);
-    await new Promise((r) => setTimeout(r, 1000));
-    setSending(false);
-    setSent(true);
+    setErrorMsg(null);
+    try {
+      await sendEmail({ data: form });
+      setSent(true);
+    } catch (err) {
+      setErrorMsg(err instanceof Error ? err.message : "No se pudo enviar el mensaje");
+    } finally {
+      setSending(false);
+    }
   }
 
   const inputBase =
@@ -164,6 +174,10 @@ export function Contact({ data }: { data: ContactContent }) {
                   />
                 </div>
               </div>
+
+              {errorMsg && (
+                <p className="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">{errorMsg}</p>
+              )}
 
               {/* Submit */}
               <button
