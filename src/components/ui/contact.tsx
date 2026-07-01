@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { User, Building2, Mail, Phone, PenLine, Send } from "lucide-react";
+import { useServerFn } from "@tanstack/react-start";
 import type { ContactContent } from "@/lib/queries/contact";
+import { sendContactEmail } from "@/lib/send-contact.functions";
 
 export function Contact({ data }: { data: ContactContent }) {
   const [form, setForm] = useState({
