@@ -175,6 +175,10 @@ export function Contact({ data }: { data: ContactContent }) {
                 </div>
               </div>
 
+              {errorMsg && (
+                <p className="rounded-lg bg-red-50 px-4 py-3 text-sm text-red-700">{errorMsg}</p>
+              )}
+
               {/* Submit */}
               <button
                 type="submit"
